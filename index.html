@@ -7,7 +7,7 @@
 </head>
 <body>
     <div>
-    <button>Hello World</button>
+    <button onclick="showAlert()">Hello World</button>
     </div>
 </body>
 </html>
@@ -32,3 +32,19 @@
         transition: 400ms;
         }
 </style>
+
+<script>
+    let clickCount = 0;
+    function showAlert() {
+        clickCount++;
+        if (clickCount === 1) {
+            alert("Don't click me");
+        } else if (clickCount === 2) {
+            alert("I said don't click me!!!");
+        } else if (clickCount === 3) {
+            alert("I've said it twice already!!!");
+        } else {
+            alert("You've clicked too many times!");
+        }
+    }
+</script>
